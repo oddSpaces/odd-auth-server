@@ -1,6 +1,7 @@
 {
   "name": "@oddspace/auth-server",
   "version": "0.0.0-development",
+  "repository": "https://github.com/oddSpaces/odd-auth-server",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
@@ -12,13 +13,17 @@
   "type": "commonjs",
   "description": "",
   "devDependencies": {
-    "prettier": "^3.4.2",
     "semantic-release": "^24.2.1",
     "typescript": "^5.7.2"
   },
-
-  "files": [ "dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "axios": "^1.7.9"
   }
 }
