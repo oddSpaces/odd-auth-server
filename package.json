@@ -1,8 +1,9 @@
 {
-  "name": "@oddspace/auth-server",
+  "name": "@oddspace/auth-client",
   "version": "0.0.0-development",
   "repository": "https://github.com/oddSpaces/odd-auth-server",
   "main": "index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "semantic-release": "semantic-release"
