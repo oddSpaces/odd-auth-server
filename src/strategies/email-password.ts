@@ -1,7 +1,7 @@
 import {authClient} from "../client";
 import {generateAccountId} from "../utils/idGen.js";
 
-const signinWithEmailPassword = async (formData: {
+export const signInWithEmailPassword = async (formData: {
    email: string, password: string, firstName: string, lastname: string,
 }) => {
    // ~ ======= perform signup -->
