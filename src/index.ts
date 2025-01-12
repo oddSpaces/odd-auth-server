@@ -1,1 +1,1 @@
-export * as supabase from './client'
+export {authClient} from './client'
