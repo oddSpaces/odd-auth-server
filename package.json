@@ -1,7 +1,7 @@
 {
   "name": "@oddspace/auth-client",
   "version": "0.0.0-development",
-  "repository": "https://github.com/oddSpaces/odd-auth-server",
+  "repository": "https://github.com/oddSpaces/odd-auth-client",
   "main": "index.js",
   "types": "dist/index.d.ts",
   "scripts": {
