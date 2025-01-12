@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "gen-types": "supabase gen types typescript --project-id seastpxgwfgjbeojvkzh > src/utils/database.types.ts"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,8 @@
     "access": "public"
   },
   "dependencies": {
-    "axios": "^1.7.9"
+    "@supabase/supabase-js": "^2.47.12",
+    "axios": "^1.7.9",
+    "supabase": "^2.2.1"
   }
 }
