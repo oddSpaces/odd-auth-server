@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "NodeNext",
-    "outDir": "dist",
+    "outDir": ".",
     "rootDir": "src",
     "declaration": true,
     "declarationMap": true,
@@ -10,6 +10,11 @@
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
