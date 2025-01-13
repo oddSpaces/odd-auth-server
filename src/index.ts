@@ -1,3 +1,3 @@
-export const greet = (text: string )=> {
-   return `Hello there! ${text}`
-}
+export {authClient} from './client'
+export * from './strategies/email-password'
+export * from './strategies/profile'
