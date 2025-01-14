@@ -21,11 +21,10 @@ export const getCurrentUser = async () => {
 // ~ =============================================>
 // ~ ======= sign out user  -->
 // ~ =============================================>
-export const signOutUser = async (redirect: any) => {
+export const signOutUser = async () => {
   const client = new AuthClient().ssr_client();
 
   await client.auth.signOut();
-  redirect("/", "replace");
 };
 
 // ~ =============================================>
