@@ -19,6 +19,7 @@ export type Database = {
           lastName: string | null
           otherNames: string | null
           phone: string | null
+          profileImg: string | null
           username: string | null
         }
         Insert: {
@@ -30,6 +31,7 @@ export type Database = {
           lastName?: string | null
           otherNames?: string | null
           phone?: string | null
+          profileImg?: string | null
           username?: string | null
         }
         Update: {
@@ -41,6 +43,7 @@ export type Database = {
           lastName?: string | null
           otherNames?: string | null
           phone?: string | null
+          profileImg?: string | null
           username?: string | null
         }
         Relationships: []

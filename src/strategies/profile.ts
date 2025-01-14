@@ -1,10 +1,11 @@
 import { AuthClient } from "../client";
 
-const createProfile = async (formData: {
+export const createTinyHogProfile = async (formData: {
   firstName: string;
   lastName: string;
   email: string;
   hogId: string;
+  profileImage?: string;
 }) => {
   const client = new AuthClient().ssr_client();
 
