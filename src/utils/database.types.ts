@@ -13,10 +13,12 @@ export type Database = {
         Row: {
           about: string | null
           created_at: string
-          email: string | null
-          firstName: string | null
+          email: string
+          firstName: string
+          hog_id: string
           id: string
-          lastName: string | null
+          imageUrl: string
+          lastName: string
           otherNames: string | null
           phone: string | null
           username: string | null
@@ -24,10 +26,12 @@ export type Database = {
         Insert: {
           about?: string | null
           created_at?: string
-          email?: string | null
-          firstName?: string | null
+          email: string
+          firstName: string
+          hog_id: string
           id?: string
-          lastName?: string | null
+          imageUrl: string
+          lastName: string
           otherNames?: string | null
           phone?: string | null
           username?: string | null
@@ -35,10 +39,12 @@ export type Database = {
         Update: {
           about?: string | null
           created_at?: string
-          email?: string | null
-          firstName?: string | null
+          email?: string
+          firstName?: string
+          hog_id?: string
           id?: string
-          lastName?: string | null
+          imageUrl?: string
+          lastName?: string
           otherNames?: string | null
           phone?: string | null
           username?: string | null
