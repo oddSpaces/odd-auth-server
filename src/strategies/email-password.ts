@@ -1,5 +1,6 @@
 import { AuthClient } from "../client";
 import { generateAccountId } from "../utils/idGen.js";
+import { th_createTinyHogProfile } from "./profile";
 
 export const signInWithEmailPassword = async (formData: {
   email: string;
@@ -17,24 +18,17 @@ export const signInWithEmailPassword = async (formData: {
       data: {
         firstName: formData.firstName,
         lastName: formData.lastname,
-        hogId: generateAccountId(),
       },
     },
   });
 
   // ~ ======= create user if account was created successfully -->
-  if (data.user) {
-    const { data: profile, error: profileError } = await client
-      .from("Profiles")
-      .insert({
-        firstName: data.user?.user_metadata.firstName,
-        lastName: data.user?.user_metadata.lastName,
-        email: data.user?.email,
-      })
-      .select()
-      .single();
-
-    return profile;
+  if (data.user && data.user.email) {
+    return await th_createTinyHogProfile({
+      firstName: data.user?.user_metadata.firstName,
+      lastName: data.user?.user_metadata.lastName,
+      email: data.user?.email,
+    });
   }
 
   if (error) {

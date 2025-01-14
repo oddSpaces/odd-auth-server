@@ -1,17 +1,23 @@
 import { AuthClient } from "../client";
+import { generateAccountId } from "../utils/idGen";
 
-export const createTinyHogProfile = async (formData: {
+export const th_createTinyHogProfile = async (formData: {
   firstName: string;
   lastName: string;
   email: string;
-  hogId: string;
   profileImage?: string;
 }) => {
   const client = new AuthClient().ssr_client();
 
   const { data, error } = await client
     .from("Profiles")
-    .insert(formData)
+    .insert({
+      ...formData,
+      hog_id: generateAccountId(),
+      profileImage:
+        formData.profileImage ||
+        "https://api.dicebear.com/9.x/notionists-neutral/svg?seed=Ryan",
+    })
     .select()
     .single();
 
@@ -23,7 +29,7 @@ export const createTinyHogProfile = async (formData: {
   return data;
 };
 
-export const getProfileById = async (id: string) => {
+export const th_getProfileByID = async (id: string) => {
   const client = new AuthClient().ssr_client();
 
   const { data, error } = await client
