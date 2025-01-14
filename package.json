@@ -35,12 +35,6 @@
     "react": "^18.3.1",
     "supabase": "^2.2.1"
   },
-  "_moduleAliases": {
-    "@/src": "dist",
-    "@/client": "dist/client",
-    "@/strategies": "dist/strategies",
-    "@/next": "dist/next"
-  },
   "exports": {
     ".": {
       "import": "./dist/index.js",

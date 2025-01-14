@@ -1,3 +1,3 @@
-export * from "@/strategies/email-password";
-export * from "@/strategies/google";
-export * from "@/strategies/profile";
+export * from "./email-password";
+export * from "./google";
+export * from "./profile";

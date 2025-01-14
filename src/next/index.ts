@@ -1,1 +1,1 @@
-export * from "@/next/middleware";
+export * from "./middleware";

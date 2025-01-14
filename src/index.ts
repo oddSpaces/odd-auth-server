@@ -1,5 +1,4 @@
 import { AuthClient } from "./client";
-import "module-alias/register";
 
 export { AuthClient } from "./client";
 export * from "./strategies";

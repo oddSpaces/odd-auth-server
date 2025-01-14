@@ -9,21 +9,6 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "baseUrl": "./",
-    "paths": {
-      "@/src/*": [
-        "./src/*"
-      ],
-      "@/client/*": [
-        "./src/client/*"
-      ],
-      "@/next/*": [
-        "./src/next/*"
-      ],
-      "@/strategies/*": [
-        "./src/strategies/*"
-      ]
-    }
   },
   "include": [
     "src"
