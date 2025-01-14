@@ -5,7 +5,7 @@ export const th_createTinyHogProfile = async (formData: {
   firstName: string;
   lastName: string;
   email: string;
-  profileImage?: string;
+  imageUrl?: string;
 }) => {
   const client = new AuthClient().ssr_client();
 
@@ -14,8 +14,8 @@ export const th_createTinyHogProfile = async (formData: {
     .insert({
       ...formData,
       hog_id: generateAccountId(),
-      profileImage:
-        formData.profileImage ||
+      imageUrl:
+        formData.imageUrl ||
         "https://api.dicebear.com/9.x/notionists-neutral/svg?seed=Ryan",
     })
     .select()
