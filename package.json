@@ -15,6 +15,7 @@
   "type": "commonjs",
   "description": "",
   "devDependencies": {
+    "prettier": "^3.4.2",
     "semantic-release": "^24.2.1",
     "typescript": "^5.7.2"
   },
@@ -29,8 +30,15 @@
     "@supabase/ssr": "^0.5.2",
     "@supabase/supabase-js": "^2.47.12",
     "axios": "^1.7.9",
+    "module-alias": "^2.2.3",
     "next": "^14.2.23",
     "react": "^18.3.1",
     "supabase": "^2.2.1"
+  },
+  "_moduleAliases": {
+    "@/src": "dist",
+    "@/client": "dist/client",
+    "@/strategies": "dist/strategies",
+    "@/next": "dist/next"
   }
 }

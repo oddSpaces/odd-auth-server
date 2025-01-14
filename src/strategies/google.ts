@@ -1,5 +1,4 @@
-import {authClient} from "../client";
-
+import { AuthClient } from "../client";
 
 // ~ =============================================>
 // ~ ======= Signup with Google   -->
@@ -10,19 +9,21 @@ import {authClient} from "../client";
  * @param {any} redirect - Should be a function that takes in a url and redirects to that url
  */
 export const signInWithGoogle = async (host: string, redirect: any) => {
-   const {data, error} = await authClient.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-         redirectTo: `${host}/api/auth/callback`
-      }
-   })
-   
-   if (error) {
-      console.log(error)
-      return null;
-   }
-   
-   if (data.url) {
-      return redirect(data.url)
-   }
-}
+  const client = new AuthClient().ssr_client();
+
+  const { data, error } = await client.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: `${host}/api/auth/callback`,
+    },
+  });
+
+  if (error) {
+    console.log(error);
+    return null;
+  }
+
+  if (data.url) {
+    return redirect(data.url);
+  }
+};
