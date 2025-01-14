@@ -40,5 +40,27 @@
     "@/client": "dist/client",
     "@/strategies": "dist/strategies",
     "@/next": "dist/next"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./next": {
+      "import": "./dist/next/index.js",
+      "require": "./dist/next/index.js",
+      "types": "./dist/next/index.d.ts"
+    },
+    "./strategies": {
+      "import": "./dist/strategies/index.js",
+      "require": "./dist/strategies/index.js",
+      "types": "./dist/strategies/index.d.ts"
+    },
+    "./client": {
+      "import": "./dist/client/index.js",
+      "require": "./dist/client/index.js",
+      "types": "./dist/client/index.d.ts"
+    }
   }
 }
