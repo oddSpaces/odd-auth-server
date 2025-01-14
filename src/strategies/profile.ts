@@ -15,5 +15,27 @@ export const createTinyHogProfile = async (formData: {
     .select()
     .single();
 
+  if (error) {
+    console.error(error);
+    return null;
+  }
+
+  return data;
+};
+
+export const getProfileById = async (id: string) => {
+  const client = new AuthClient().ssr_client();
+
+  const { data, error } = await client
+    .from("Profiles")
+    .select()
+    .eq("id", id)
+    .single();
+
+  if (error) {
+    console.error(error);
+    return null;
+  }
+
   return data;
 };
