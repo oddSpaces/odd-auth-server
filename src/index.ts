@@ -3,6 +3,7 @@ import {authClient} from "./client";
 export {authClient} from './client'
 export * from './strategies/email-password'
 export * from './strategies/profile'
+export * from './strategies/google'
 
 // ~ =============================================>
 // ~ ======= Get current user  -->
