@@ -2,9 +2,7 @@ import { AuthClient } from "./client";
 import "module-alias/register";
 
 export { AuthClient } from "./client";
-export * from "./strategies/email-password";
-export * from "./strategies/profile";
-export * from "./strategies/google";
+export * from "./strategies";
 
 // ~ =============================================>
 // ~ ======= Get current user  -->
