@@ -6,9 +6,8 @@ import { AuthClient } from "../client";
 /**
  * Sign in with Google credentials
  * @param {string} host - Host of the current client to redirect to
- * @param {any} redirect - Should be a function that takes in a url and redirects to that url
  */
-export const signInWithGoogle = async (host: string, redirect: any) => {
+export const signInWithGoogle = async (host: string) => {
   const client = new AuthClient().ssr_client();
 
   const { data, error } = await client.auth.signInWithOAuth({
@@ -23,7 +22,5 @@ export const signInWithGoogle = async (host: string, redirect: any) => {
     return null;
   }
 
-  if (data.url) {
-    return redirect(data.url);
-  }
+  return data;
 };
